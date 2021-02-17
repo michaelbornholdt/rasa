@@ -1,0 +1,43 @@
+language: en
+pipeline:
+  - cache_dir: ./.cache
+    model_name: bert
+    model_weights: bert-base-uncased
+    name: HFTransformersNLP
+  - case_sensitive: 'false'
+    intent_split_symbol: _
+    intent_tokenization_flag: 'false'
+    name: ConveRTTokenizer
+    model_url: >-
+      https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz
+  - name: ConveRTFeaturizer
+    model_url: >-
+      https://github.com/connorbrinton/polyai-models/releases/download/v1.0/model.tar.gz
+  - embedding_dimension: 24
+    entity_recognition: 'false'
+    epochs: 90
+    learning_rate: 0.002
+    name: DIETClassifier
+    number_of_transformer_layers: 3
+  - dimensions:
+      - email
+    name: DucklingHTTPExtractor
+    url: 'http://duckling:8000'
+  - name: EntitySynonymMapper
+policies:
+  - epochs: 50
+    featurizer:
+      - max_history: 5
+        name: MaxHistoryTrackerFeaturizer
+        state_featurizer:
+          - name: BinarySingleStateFeaturizer
+    name: KerasPolicy
+  - max_history: 5
+    name: AugmentedMemoizationPolicy
+  - name: TwoStageFallbackPolicy
+    nlu_threshold: 0.5
+    core_threshold: 0.3
+    fallback_nlu_action_name: action_default_fallback
+    fallback_core_action_name: action_default_fallback
+  - name: MappingPolicy
+  - name: FormPolicy
