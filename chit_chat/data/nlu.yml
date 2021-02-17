@@ -1,0 +1,587 @@
+version: "2.0"
+
+nlu:
+  - intent: intent_rephrase
+    examples: |
+      - let me rephrase
+      - I'll rephrase
+      - rephrase
+      - I will rephrase the question
+      - I will rephrase
+      - let me rephrase this
+
+  - intent: who_am_I
+    examples: |
+      - Tell me about yourself
+      - What can you tell me about yourself
+      - What does this do?
+      - What do you do?
+      - What is this?
+      - Whats this?
+      - Who are you?
+      - How does this work?
+      - Are you a bot?
+      - What is your thing?
+      - What are you?
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - what am I talking to?
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+
+  - intent: help
+    examples: |
+      - I need help
+      - how does this work?
+      - can you help me?
+      - help
+      - /help
+      - Can you help me?
+      - How do I do this?
+      - help me
+      - How to
+      - Can you help me?
+      - How can you help?
+      - What can you help with?
+      - I need help!
+      - I need help with some advice!
+      - Can you give me some advice!
+      - How can you help me?
+      - And now?
+      - Can you help me?
+      - How can you help?
+      - What can you help with?
+      - I need help!
+      - I need help with some advice!
+      - Can you give me some advice!
+
+
+  - intent: cancel
+    examples: |
+      - nevermind forget about it
+      - nothing just forget it
+      - no just cancel
+      - sorry cancel
+      - Cancel
+      - disregard
+      - no cancel cancel
+      - forget
+      - cancel everything
+      - cancel that one
+      - i want to cancel
+      - cancel it
+      - cancelled
+      - cancel it now
+      - don't want cancel
+      - cancel soon
+      - shall stand cancelled
+      - stop
+      - stop it
+      - I am done
+      - exit
+      - over
+
+  - intent: nice_to_talk_to_you
+    examples: |
+      - it's been so nice to talk to you
+      - it's been a pleasure talking to you
+      - nice to talk to you
+      - it's nice to talk to you
+      - nice talking to you
+      - it is nice talking to you
+      - how nice it is to talk to you
+      - it was great chatting with you
+      - nice to talk to you again
+      - It was nice speaking with you
+      - It was great to talk to you
+      - nice chatting with you
+      - pleased to talk to you
+      - pleasure to talk
+      - It's been a pleasure talking to u
+
+  - intent: affirmative
+    examples: |
+      - yeah exactly
+      - okay that's fine
+      - I agree
+      - that is ok
+      - I guess
+      - okey
+      - ya
+      - ok yes
+      - yes it is
+      - yep
+      - yew
+      - yeah
+      - yeah fine
+      - yea fine
+      - yep okay
+      - fine okay
+      - yup
+      - YEAH
+      - okay buddy
+      - oh okay
+      - yeah sure
+      - okay cool
+      - coool
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: negative
+    examples: |
+      - don't
+      - don't want
+      - need not
+      - don't come
+      - never help
+      - not needed
+      - of course not
+      - never
+      - not at this time
+      - not exactly
+      - absolutely no
+      - no forget
+      - do not
+      - no thanks
+      - no don't want
+      - sorry no
+      - don't want your help
+      - I don't you help
+      - I don't want your assistance
+      - get out goodbye
+      - i do not want your help
+      - i don't need your help
+      - i don't want your help
+      - i am not okay with your help
+      - I don't need anything from you
+      - okay keep it in mind
+      - nope i dont need your help
+      - Don't show off
+      - nope
+      - No thanks
+      - No thank you
+      - Not right now :)
+      - no thanks :)
+
+  - intent: appraisal
+    examples: |
+      - so cool
+      - cool
+      - that is good
+      - glad to hear that
+      - that's very nice of you
+      - terrific
+      - it's amazing
+      - that's awesome
+      - perfect
+      - excellent
+      - that's great
+      - it's good
+      - fine
+      - good
+      - nice
+      - very good
+      - amazing
+      - great
+      - good very good
+      - that's very good
+      - really good
+      - it is fine
+      - it is good
+      - it's great
+      - it's perfect
+      - much better
+      - not bad
+      - not too bad
+      - that's nice
+      - pleasant
+      - pretty good
+      - really nice
+      - straight
+      - super
+      - super fantastic
+      - sweet
+      - really well
+      - very well
+      - that is awesome
+      - that is nice
+      - that is wonderful
+      - that was amazing
+      - that was awesome
+      - that was cute
+      - that was pretty good
+      - that was very good
+      - that's a good idea
+      - that's a good thing
+      - that's amazing
+      - that's awesome thank you
+      - that's better
+      - that's cute
+      - that's fantastic
+      - that's much better
+      - that's nice of you
+      - that's not bad
+      - that's perfect
+      - that's pretty good
+      - that's really good
+      - that's really nice
+      - that's sweet of you
+      - that's very nice
+      - that's wonderful
+      - this is awesome
+      - this is good
+      - this is great
+      - very then
+      - wonderful
+      - I'm glad to hear that
+      - ok good
+      - good to know
+      - glad to hear it
+      - so good
+      - so sweet of you
+      - it was good
+      - oh well
+      - good thing
+      - that was good
+      - it's awesome
+      - okay good
+      - it's fine
+      - no it's okay
+      - very nice
+      - it's very good
+      - that's fine
+      - good for you
+      - good job
+      - great job
+      - way to go
+      - well done
+      - nice work
+      - great work
+      - amazing work
+      - you did a wonderful job
+      - bravo
+      - fantastic
+      - good work
+      - marvelous
+      - splendid
+      - mind blowing
+      - just great
+      - u r awesome
+      - kudos
+      - brilliant
+      - out standing
+      - you helped a lot thank you
+      - appreciate your help
+      - cheers
+      - thanks
+      - thanks a lot
+      - terrific thank you
+      - great thank you
+      - thanks so much
+      - thank you so much
+      - thanks for your help
+      - thank you for your help
+      - nice thank you
+      - I appreciate it
+      - I thank you
+      - thank you that will be all
+      - thanks buddy
+      - thanks love
+      - thank you my friend
+      - well thanks
+      - very good thank you
+      - good thanks
+      - thanks again
+      - thank you again
+      - all thank you
+      - alright thank you
+      - alright thanks
+      - no thank you that's all
+      - perfect thank you
+      - so nice of you
+      - well thank you
+      - thnx
+      - thank you
+      - tqsm
+      - ty
+
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - okay see you later
+      - hope to see you later
+      - bye for now
+      - till next time
+      - I must go
+      - bye
+      - goodbye
+      - see you
+      - see you soon
+      - bye-bye
+      - bye bye good night
+      - good bye
+      - bye bye see you
+      - bye bye see you soon
+      - bye bye take care
+      - I said bye
+      - never mind bye
+      - now bye
+      - that's all goodbye
+      - that's it goodbye
+      - leave me alone
+      - go to bed
+      - goodbye for now
+      - talk to you later
+      - you can go now
+      - get lost
+      - goodbye see you later
+      - alright bye
+      - see ya
+      - thanks bye bye
+      - okay bye
+      - okay thank you bye
+      - see you tomorrow
+      - ok bye
+      - c u
+
+  - intent: hello
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - long time no see
+      - hello
+      - hi
+      - howdy
+      - hey there
+      - greetings
+      - I greet you
+      - hi there
+      - hello there
+      - lovely day isn't it
+      - hello again
+      - just going to say hi
+      - a good day
+      - afternoon
+      - hello hi
+      - heya
+      - hey
+      - Hello
+      - hey man
+      - hey buddy
+      - oka
+      - yo man
+      - hola
+      - nice to meet you
+      - it was nice meeting you
+      - it was very nice to meet you
+      - good to know each other
+      - glad to meet you
+      - nice meeting you
+      - nice to meet you too
+      - pleased to meet you
+      - pleasure to meet you
+      - pleasure to meet you too
+      - happy to meet you
+      - It’s a pleasure to meet you again
+      - It’s very nice to meet you
+      - Lovely to meet you
+      - How wonderful to meet you
+      - It was lovely meeting you
+      - It’s been a pleasure meeting you
+      - I’ve enjoyed meeting you
+      - Great interacting with you
+      - I had a great time or meeting
+      - it's nice to see you
+      - lovely to see you
+      - I'm glad to see you
+      - great to see you
+      - it's good to see you
+      - glad to see you
+      - how good it is to see you
+      - always a pleasure to see you
+      - nice to see you
+      - good to see you
+      - great to see you again
+      - great to see you too
+      - I am glad to see you again
+      - nice to see you again
+      - good to see you again
+      - it's good to see you too
+      - It was great catching up with u
+      - I'm really pleased to see u again
+      - I’m delighted to see you again
+      - Great seeing u
+
+  - intent: how_are_you
+    examples: |
+      - how is your morning so far
+      - how are you getting on
+      - how's your day going
+      - how are you?
+      - is everything all right
+      - how are you doing?
+      - how are the things going
+      - are you alright
+      - are you okay?
+      - how are you feeling
+      - how are you going?
+      - is everything okay
+      - how are you today?
+      - how do you feel?
+      - how have you been?
+      - how is it going?
+      - how is your day
+      - how is your day going
+      - how is your evening
+      - how was your day
+      - are you having a good day
+      - hope your day is going well
+      - hope you re having a pleasant evening
+      - how's life?
+      - I'm fine and you
+      - how is your life
+      - how has your day been
+      - how is your morning going
+      - how has your day been going
+      - how about you?
+      - how is your day being
+      - how is your day going on
+      - how your day is going
+      - what was your day like
+      - what about your day
+      - how's your day
+      - how are you doing this morning
+      - how do you do?
+      - how are you
+
+  - intent: negatve_feedback
+    examples: |
+      - pretty bad
+      - not good enough
+      - that was lame
+      - that was terrible
+      - it is bad
+      - that's bad
+      - this is bad
+      - not good
+      - I'm afraid it's bad
+      - no it's bad
+      - that was awful
+      - bad
+      - so bad
+      - this is too bad
+      - terrible
+      - horrible
+      - horrific
+      - abysmal
+      - it's bad
+      - no good
+      - that was bad
+      - that was horrible
+      - that's lame
+      - that's not good
+      - that's terrible
+      - that's too bad
+      - this is not good
+      - too bad
+      - very bad
+      - bad girl
+      - it's not good
+      - not so good
+      - it's very bad
+      - it's too bad
+      - that's not good enough
+      - well too bad
+      - bad very bad
+      - it's so bad
+      - really bad
+      - it's really bad
+      - bad idea
+      - that is bad
+      - that was not good
+      - it's not so good
+      - not a good one
+      - oh that's not good
+      - not too good
+      - so lame
+      - that's really bad
+      - it is too bad
+      - bad really bad
+      - not okay
+      - Nothing
+      - Shut up
+      - nothing
+      - Fool
+      - You are a bad bot
+      - You are not so good
+      - You are a pretty bad
+      - You are not helping me
+      - You are stupid
+      - Your useless
+      - Your not helping
+      - What a stupid bot
+      - Why are you so stupid
+      - You dont get it!
+      - You are not understanding!
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
